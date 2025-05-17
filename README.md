@@ -19,10 +19,6 @@ The website features a clean, responsive layout and includes key sections such a
 - **Tools:** VS Code, GitHub
 - **Cloud & DevOps:** AWS, Jenkins, Docker, Ansible, Git, CloudWatch, IAM
 
-## 🔗 Live Demo
-
-[Insert your live portfolio link here]
-
 ## 📬 Contact
 
 - Email: [talkpriyanshusharma19@gmail.com](mailto:talkpriyanshusharma19@gmail.com)  
