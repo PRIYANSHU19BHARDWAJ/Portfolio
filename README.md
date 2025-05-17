@@ -17,7 +17,7 @@ The website features a clean, responsive layout and includes key sections such a
 
 - **Frontend:** HTML5, CSS3
 - **Tools:** VS Code, GitHub
-- **Cloud & DevOps:** AWS, Jenkins, Docker, Ansible, Git, CloudWatch, IAM
+- **Cloud & DevOps:** AWS, Git, CloudWatch, IAM
 
 ## 📬 Contact
 
