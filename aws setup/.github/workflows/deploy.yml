@@ -1,0 +1,29 @@
+name: Deploy to AWS EC2
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Terraform
+      uses: hashicorp/setup-terraform@v2
+
+    - name: Terraform Init & Apply
+      run: |
+        cd terraform
+        terraform init
+        terraform apply -auto-approve -var="key_name=your-key"
+
+    - name: Set up Ansible
+      run: |
+        sudo apt update && sudo apt install -y ansible
+        cd ansible
+        ansible-playbook -i inventory playbook.yml
