@@ -15,9 +15,33 @@ The website features a clean, responsive layout and includes key sections such a
 
 ## 🚀 Technologies Used
 
-- **Frontend:** HTML5, CSS3
-- **Tools:** VS Code, GitHub
-- **Cloud & DevOps:** AWS, Git, CloudWatch, IAM
+Category	Tools / Technologies
+Frontend	HTML, CSS
+Cloud Provider	AWS (EC2, IAM, Security Groups)
+Infrastructure as Code	Terraform
+Configuration Management	Ansible
+CI/CD Pipeline	GitHub Actions
+Web Server	Apache HTTP Server
+Operating System	Amazon Linux 2
+Version Control	Git & GitHub
+📦 Project Structure
+graphql
+Copy
+Edit
+Portfolio/
+├── terraform/               # EC2 provisioning with Terraform
+│   ├── main.tf
+│   ├── variables.tf
+│   └── outputs.tf
+├── ansible/                 # Web server setup & deployment
+│   ├── playbook.yml
+│   └── inventory
+├── .github/
+│   └── workflows/
+│       └── deploy.yml       # CI/CD pipeline using GitHub Actions
+├── index.html               # Main portfolio file
+├── style.css                # Styling for portfolio
+└── README.md
 
 ## 📬 Contact
 
