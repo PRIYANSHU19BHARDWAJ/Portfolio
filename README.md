@@ -31,19 +31,24 @@ graphql
 Copy
 Edit
 Portfolio/
-├── terraform/               # EC2 provisioning with Terraform
+# ├── terraform/               # EC2 provisioning with Terraform
 │   ├── main.tf
 │   ├── variables.tf
 │   └── outputs.tf
-├── ansible/                 # Web server setup & deployment
+
+# ├── ansible/                 # Web server setup & deployment
 │   ├── playbook.yml
 │   └── inventory
-├── .github/
+
+# ├── .github/
 │   └── workflows/
 │       └── deploy.yml       # CI/CD pipeline using GitHub Actions
-├── index.html               # Main portfolio file
-├── style.css                # Styling for portfolio
-└── README.md
+
+# ├── index.html               # Main portfolio file
+
+# ├── style.css                # Styling for portfolio
+
+# └── README.md
 
 ## 📬 Contact
 
