@@ -20,7 +20,7 @@ jobs:
       run: |
         cd terraform
         terraform init
-        terraform apply -auto-approve -var="key_name=your-key"
+        terraform apply -auto-approve -var="key_name=your-key" #Replace your-key with your actual EC2 key pair name.
 
     - name: Set up Ansible
       run: |
