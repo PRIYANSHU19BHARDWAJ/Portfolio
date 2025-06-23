@@ -24,7 +24,9 @@ CI/CD Pipeline	GitHub Actions
 Web Server	Apache HTTP Server
 Operating System	Amazon Linux 2
 Version Control	Git & GitHub
-📦 Project Structure
+
+## 📦 Project Structure
+
 graphql
 Copy
 Edit
