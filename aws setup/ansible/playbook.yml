@@ -1,18 +1,16 @@
-- hosts: all
-  become: yes
+- name: Deploy Portfolio
+  hosts: all
+  become: true
+
   tasks:
-    - name: Install Apache
-      yum:
-        name: httpd
+    - name: Install NGINX
+      apt:
+        name: nginx
         state: present
+        update_cache: yes
 
-    - name: Start and enable Apache
-      service:
-        name: httpd
-        state: started
-        enabled: yes
-
-    - name: Copy portfolio files
+    - name: Copy Portfolio Files
       copy:
-        src: ../index.html
-        dest: /var/www/html/index.html
+        src: ../portfolio/
+        dest: /var/www/html/
+        mode: '0644'
