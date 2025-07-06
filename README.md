@@ -38,20 +38,18 @@ Portfolio/
 ## ├── terraform/               # EC2 provisioning with Terraform
 │   ├── main.tf
 │   ├── variables.tf
-│   └── outputs.tf
 
 ## ├── ansible/                 # Web server setup & deployment
 │   ├── playbook.yml
-│   └── inventory
 
 ## ├── .github/
 │   └── workflows/
 │       └── deploy.yml       # CI/CD pipeline using GitHub Actions
 
-## ├── index.html               # Main portfolio file
-
-## ├── style.css                # Styling for portfolio
-
+## ├── portfolio UI
+|     └── index.html        # Make the UI
+|     └── style.css         # Styling for portfolio
+    
 ## └── README.md
 
 ## 📬 Contact
