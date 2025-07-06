@@ -1,4 +1,4 @@
-# 🔗 **Live Demo:** [Click Here](https://github.com/PRIYANSHU19BHARDWAJ/Portfolio)
+# 🔗 **Live Demo:** [Click Here](https://priyanshu19bhardwaj.github.io/Portfolio)
 
 # 🌐 Priyanshu Bhardwaj – Portfolio
 
