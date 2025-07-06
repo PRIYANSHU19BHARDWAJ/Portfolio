@@ -1,4 +1,4 @@
-variable "key_name" {
-  description = "EC2 key pair name"
-  type        = string
-}
+variable "region" {}
+variable "access_key" {}
+variable "secret_key" {}
+
