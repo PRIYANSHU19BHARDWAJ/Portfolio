@@ -1,29 +1,39 @@
-name: Deploy to AWS EC2
+name: Deploy Portfolio
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
+      - name: 🧾 Checkout repository
+        uses: actions/checkout@v3
 
-    - name: Set up Terraform
-      uses: hashicorp/setup-terraform@v2
+      - name: ☁️ Setup Terraform
+        uses: hashicorp/setup-terraform@v3
 
-    - name: Terraform Init & Apply
-      run: |
-        cd terraform
-        terraform init
-        terraform apply -auto-approve -var="key_name=your-key" #Replace your-key with your actual EC2 key pair name.
+      - name: 🏗️ Terraform Init and Apply
+        run: |
+          cd terraform
+          terraform init
+          terraform apply -auto-approve \
+            -var="region=${{ secrets.AWS_REGION }}" \
+            -var="access_key=${{ secrets.AWS_ACCESS_KEY_ID }}" \
+            -var="secret_key=${{ secrets.AWS_SECRET_ACCESS_KEY }}"
 
-    - name: Set up Ansible
-      run: |
-        sudo apt update && sudo apt install -y ansible
-        cd ansible
-        ansible-playbook -i inventory playbook.yml
+      - name: 🛠️ Install Ansible
+        run: sudo apt update && sudo apt install -y ansible
+
+      - name: 🔐 Save Private Key
+        run: |
+          echo "${{ secrets.PRIVATE_KEY }}" > portfolio-key.pem
+          chmod 400 portfolio-key.pem
+
+      - name: 📡 Run Ansible Playbook
+        run: |
+          public_ip=$(cd terraform && terraform output -raw public_ip)
+          echo "[web]\n$public_ip ansible_user=ubuntu ansible_ssh_private_key_file=portfolio-key.pem" > inventory.ini
+          ansible-playbook -i inventory.ini ansible/playbook.yml
