@@ -27,8 +27,6 @@ Web Server	Apache HTTP Server
 Operating System	Amazon Linux 2
 Version Control	Git & GitHub
 
-## Deployed via CI/CD 🚀
-
 ## 📦 Project Structure
 
 graphql
